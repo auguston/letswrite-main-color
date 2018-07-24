@@ -1,0 +1,744 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title 主要色系：江湖藍
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='stylesheet', href='https://bootswatch.com/4/cosmo/bootstrap.css', media='screen')
+    link(rel='stylesheet', href='https://bootswatch.com/_assets/css/custom.min.css')
+    link(rel="stylesheet", href="color.css")
+  body
+    div#main-color(:class="className")
+      .navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-primary
+        .container
+          a.navbar-brand(href="//auguston.github.io/main-color/") 江湖藍
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item.dropdown
+                a.nav-link(href='#',
+                          :class="{ 'active': className === 'blue-main' }",
+                          @click.prevent="className = 'blue-main'") 江湖藍1
+              li.nav-item.dropdown
+                a.nav-link(href='#',
+                          :class="{ 'active': className === 'blue-d2' }",
+                          @click.prevent="className = 'blue-d2'") 江湖藍2
+              li.nav-item.dropdown
+                a.nav-link(href='#',
+                          :class="{ 'active': className === 'blue-d3' }",
+                          @click.prevent="className = 'blue-d3'") 江湖藍3
+              li.nav-item.dropdown
+                a.nav-link(href='#',
+                          :class="{ 'active': className === 'blue-d4' }",
+                          @click.prevent="className = 'blue-d4'") 江湖藍4
+              li.nav-item.dropdown
+                a.nav-link(href='#',
+                          :class="{ 'active': className === 'blue-d5' }",
+                          @click.prevent="className = 'blue-d5'") 江湖藍5
+      .container
+        #banner.page-header
+          .row
+            .col-lg-12
+              h1 江湖藍
+              p.lead {{ showColor }}
+
+        //
+          Navbar
+          ==================================================
+        .bs-docs-section.clearfix
+          .row
+            .col-lg-12
+              .page-header
+                h1#navbars Navbars
+              .bs-component
+                nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+                  a.navbar-brand(href='#') Navbar
+                  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                  #navbarColor01.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                      li.nav-item.active
+                        a.nav-link(href='#')
+                          | Home 
+                          span.sr-only (current)
+                      li.nav-item
+                        a.nav-link(href='#') Features
+                      li.nav-item
+                        a.nav-link(href='#') Pricing
+                      li.nav-item
+                        a.nav-link(href='#') About
+                    form.form-inline.my-2.my-lg-0
+                      input.form-control.mr-sm-2(type='text', placeholder='Search')
+                      button.btn.btn-secondary.my-2.my-sm-0(type='submit') Search
+              .bs-component
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                  a.navbar-brand(href='#') Navbar
+                  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor03', aria-controls='navbarColor03', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                  #navbarColor03.collapse.navbar-collapse
+                    ul.navbar-nav.mr-auto
+                      li.nav-item.active
+                        a.nav-link(href='#')
+                          | Home 
+                          span.sr-only (current)
+                      li.nav-item
+                        a.nav-link(href='#') Features
+                      li.nav-item
+                        a.nav-link(href='#') Pricing
+                      li.nav-item
+                        a.nav-link(href='#') About
+                    form.form-inline.my-2.my-lg-0
+                      input.form-control.mr-sm-2(type='text', placeholder='Search')
+                      button.btn.btn-primary.my-2.my-sm-0(type='submit') Search
+        //
+          Buttons
+          ==================================================
+        .bs-docs-section
+          .page-header
+            .row
+              .col-lg-12
+                h1#buttons Buttons
+          .row
+            .col-lg-7
+              p.bs-component
+                button.btn.btn-primary(type='button') Primary
+                button.btn.btn-link(type='button') Link
+              .bs-component
+                button.btn.btn-primary.btn-lg(type='button') Large button
+                button.btn.btn-primary(type='button') Default button
+                button.btn.btn-primary.btn-sm(type='button') Small button
+            .col-lg-5
+              p.bs-component
+                button.btn.btn-primary.btn-lg.btn-block(type='button') Block level button
+              .bs-component(style='margin-bottom: 15px;')
+                .btn-group.btn-group-toggle(data-toggle='buttons')
+                  label.btn.btn-primary.active
+                    input(type='checkbox', checked='', autocomplete='off')
+                    |  Active
+                  label.btn.btn-primary
+                    input(type='checkbox', autocomplete='off')
+                    |  Check
+                  label.btn.btn-primary
+                    input(type='checkbox', autocomplete='off')
+                    |  Check
+              .bs-component(style='margin-bottom: 15px;')
+                .btn-group.btn-group-toggle(data-toggle='buttons')
+                  label.btn.btn-primary.active
+                    input#option1(type='radio', name='options', autocomplete='off', checked='')
+                    |  Active
+                  label.btn.btn-primary
+                    input#option2(type='radio', name='options', autocomplete='off')
+                    |  Radio
+                  label.btn.btn-primary
+                    input#option3(type='radio', name='options', autocomplete='off')
+                    |  Radio
+              .bs-component
+                .btn-group-vertical(data-toggle='buttons')
+                  button.btn.btn-primary(type='button') Button
+                  button.btn.btn-primary(type='button') Button
+                  button.btn.btn-primary(type='button') Button
+                  button.btn.btn-primary(type='button') Button
+                  button.btn.btn-primary(type='button') Button
+                  button.btn.btn-primary(type='button') Button
+        //
+          Typography
+          ==================================================
+        .bs-docs-section
+          .row
+            .col-lg-12
+              .page-header
+                h1#typography Typography
+          // Headings
+          .row
+            .col-lg-4
+              .bs-component
+                h1 Heading 1
+                h2 Heading 2
+                h3 Heading 3
+                h4 Heading 4
+                h5 Heading 5
+                h6 Heading 6
+                h3
+                  | Heading
+                  small.text-muted with muted text
+                p.lead Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+            .col-lg-4
+              .bs-component
+                h2 Example body text
+                p
+                  | Nullam quis risus eget 
+                  a(href='#') urna mollis ornare
+                  |  vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                p
+                  small This line of text is meant to be treated as fine print.
+                p
+                  | The following is 
+                  strong rendered as bold text
+                  | .
+                p
+                  | The following is 
+                  em rendered as italicized text
+                  | .
+                p
+                  | An abbreviation of the word attribute is 
+                  abbr(title='attribute') attr
+                  | .
+            .col-lg-4
+              .bs-component
+                h2 Emphasis classes
+                p.text-muted Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                p.text-primary Nullam id dolor id nibh ultricies vehicula ut id elit.
+          
+          // Blockquotes
+          .row
+            .col-lg-12
+              h2#type-blockquotes Blockquotes
+          .row
+            .col-lg-4
+              .bs-component
+                blockquote.blockquote
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer
+                    | Someone famous in 
+                    cite(title='Source Title') Source Title
+            .col-lg-4
+              .bs-component
+                blockquote.blockquote.text-center
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer
+                    | Someone famous in 
+                    cite(title='Source Title') Source Title
+            .col-lg-4
+              .bs-component
+                blockquote.blockquote.text-right
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer
+                    | Someone famous in 
+                    cite(title='Source Title') Source Title
+        //
+          Tables
+          ==================================================
+        .bs-docs-section
+          .row
+            .col-lg-12
+              .page-header
+                h1#tables Tables
+              .bs-component
+                table.table.table-hover
+                  thead
+                    tr
+                      th(scope='col') Type
+                      th(scope='col') Column heading
+                      th(scope='col') Column heading
+                      th(scope='col') Column heading
+                  tbody
+                    tr.table-active
+                      th(scope='row') Active
+                      td Column content
+                      td Column content
+                      td Column content
+                    tr
+                      th(scope='row') Default
+                      td Column content
+                      td Column content
+                      td Column content
+                    tr.table-primary
+                      th(scope='row') Primary
+                      td Column content
+                      td Column content
+                      td Column content
+              // /example
+              //
+                Forms
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#forms Forms
+                .row
+                  .col-lg-6
+                    .bs-component
+                      form
+                        fieldset
+                          legend Legend
+                          .form-group.row
+                            label.col-sm-2.col-form-label(for='staticEmail') Email
+                            .col-sm-10
+                              input#staticEmail.form-control-plaintext(type='text', readonly='', value='email@example.com')
+                          .form-group
+                            label(for='exampleInputEmail1') Email address
+                            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+                            small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+                          .form-group
+                            label(for='exampleInputPassword1') Password
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                          .form-group
+                            label(for='exampleSelect1') Example select
+                            select#exampleSelect1.form-control
+                              option 1
+                              option 2
+                              option 3
+                              option 4
+                              option 5
+                          .form-group
+                            label(for='exampleSelect2') Example multiple select
+                            select#exampleSelect2.form-control(multiple='')
+                              option 1
+                              option 2
+                              option 3
+                              option 4
+                              option 5
+                          .form-group
+                            label(for='exampleTextarea') Example textarea
+                            textarea#exampleTextarea.form-control(rows='3')
+                          .form-group
+                            label(for='exampleInputFile') File input
+                            input#exampleInputFile.form-control-file(type='file', aria-describedby='fileHelp')
+                            small#fileHelp.form-text.text-muted
+                              | This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
+                          fieldset.form-group
+                            legend Radio buttons
+                            .form-check
+                              label.form-check-label
+                                input#optionsRadios1.form-check-input(type='radio', name='optionsRadios', value='option1', checked='')
+                                |                         Option one is this and that—be sure to include why it's great
+                            .form-check
+                              label.form-check-label
+                                input#optionsRadios2.form-check-input(type='radio', name='optionsRadios', value='option2')
+                                |                         Option two can be something else and selecting it will deselect option one
+                            .form-check.disabled
+                              label.form-check-label
+                                input#optionsRadios3.form-check-input(type='radio', name='optionsRadios', value='option3', disabled='')
+                                |                         Option three is disabled
+                          fieldset.form-group
+                            legend Checkboxes
+                            .form-check
+                              label.form-check-label
+                                input.form-check-input(type='checkbox', value='', checked='')
+                                |                         Option one is this and that—be sure to include why it's great
+                            .form-check.disabled
+                              label.form-check-label
+                                input.form-check-input(type='checkbox', value='', disabled='')
+                                |                         Option two is disabled
+                          button.btn.btn-primary(type='submit') Submit
+                  .col-lg-4.offset-lg-1
+                    form.bs-component
+                      .form-group
+                        fieldset(disabled='')
+                          label.control-label(for='disabledInput') Disabled input
+                          input#disabledInput.form-control(type='text', placeholder='Disabled input here...', disabled='')
+                      .form-group
+                        fieldset
+                          label.control-label(for='readOnlyInput') Readonly input
+                          input#readOnlyInput.form-control(type='text', placeholder='Readonly input here…', readonly='')
+                      .form-group.has-success
+                        label.form-control-label(for='inputSuccess1') Valid input
+                        input#inputValid.form-control.is-valid(type='text', value='correct value')
+                        .valid-feedback Success! You've done it.
+                      .form-group.has-danger
+                        label.form-control-label(for='inputDanger1') Invalid input
+                        input#inputInvalid.form-control.is-invalid(type='text', value='wrong value')
+                        .invalid-feedback Sorry, that username's taken. Try another?
+                      .form-group
+                        label.col-form-label.col-form-label-lg(for='inputLarge') Large input
+                        input#inputLarge.form-control.form-control-lg(type='text', placeholder='.form-control-lg')
+                      .form-group
+                        label.col-form-label(for='inputDefault') Default input
+                        input#inputDefault.form-control(type='text', placeholder='Default input')
+                      .form-group
+                        label.col-form-label.col-form-label-sm(for='inputSmall') Small input
+                        input#inputSmall.form-control.form-control-sm(type='text', placeholder='.form-control-sm')
+                      .form-group
+                        label.control-label Input addons
+                        .form-group
+                          .input-group.mb-3
+                            .input-group-prepend
+                              span.input-group-text $
+                            input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+                            .input-group-append
+                              span.input-group-text .00
+                    .bs-component
+                      fieldset
+                        legend Custom forms
+                        .form-group
+                          .custom-control.custom-radio
+                            input#customRadio1.custom-control-input(type='radio', name='customRadio', checked='')
+                            label.custom-control-label(for='customRadio1') Toggle this custom radio
+                          .custom-control.custom-radio
+                            input#customRadio2.custom-control-input(type='radio', name='customRadio')
+                            label.custom-control-label(for='customRadio2') Or toggle this other custom radio
+                          .custom-control.custom-radio
+                            input#customRadio3.custom-control-input(type='radio', name='customRadio', disabled='')
+                            label.custom-control-label(for='customRadio3') Disabled custom radio
+                        .form-group
+                          .custom-control.custom-checkbox
+                            input#customCheck1.custom-control-input(type='checkbox', checked='')
+                            label.custom-control-label(for='customCheck1') Check this custom checkbox
+                          .custom-control.custom-checkbox
+                            input#customCheck2.custom-control-input(type='checkbox', disabled='')
+                            label.custom-control-label(for='customCheck2') Disabled custom checkbox
+                        .form-group
+                          select.custom-select
+                            option(selected='') Open this select menu
+                            option(value='1') One
+                            option(value='2') Two
+                            option(value='3') Three
+                        .form-group
+                          .input-group.mb-3
+                            .custom-file
+                              input#inputGroupFile02.custom-file-input(type='file')
+                              label.custom-file-label(for='inputGroupFile02') Choose file
+                            .input-group-append
+                              span.input-group-text(id='') Upload
+              //
+                Navs
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#navs Navs
+                .row(style='margin-bottom: 2rem;')
+                  .col-lg-6
+                    h2#nav-tabs Tabs
+                    .bs-component
+                      ul.nav.nav-tabs
+                        li.nav-item
+                          a.nav-link.active(data-toggle='tab', href='#home') Home
+                        li.nav-item
+                          a.nav-link(data-toggle='tab', href='#profile') Profile
+                        li.nav-item
+                          a.nav-link.disabled(href='#') Disabled
+                        li.nav-item.dropdown
+                          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+                      #myTabContent.tab-content
+                        #home.tab-pane.fade.show.active
+                          p
+                            | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                        #profile.tab-pane.fade
+                          p
+                            | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                        #dropdown1.tab-pane.fade
+                          p
+                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+                        #dropdown2.tab-pane.fade
+                          p
+                            | Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.
+                  .col-lg-6
+                    h2#nav-pills Pills
+                    .bs-component
+                      ul.nav.nav-pills
+                        li.nav-item
+                          a.nav-link.active(href='#') Active
+                        li.nav-item.dropdown
+                          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+                        li.nav-item
+                          a.nav-link(href='#') Link
+                        li.nav-item
+                          a.nav-link.disabled(href='#') Disabled
+                    br
+                    .bs-component
+                      ul.nav.nav-pills.flex-column
+                        li.nav-item
+                          a.nav-link.active(href='#') Active
+                        li.nav-item.dropdown
+                          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+                          .dropdown-menu
+                            a.dropdown-item(href='#') Action
+                            a.dropdown-item(href='#') Another action
+                            a.dropdown-item(href='#') Something else here
+                            .dropdown-divider
+                            a.dropdown-item(href='#') Separated link
+                        li.nav-item
+                          a.nav-link(href='#') Link
+                        li.nav-item
+                          a.nav-link.disabled(href='#') Disabled
+                .row
+                  .col-lg-6
+                    h2#nav-breadcrumbs Breadcrumbs
+                    .bs-component
+                      ol.breadcrumb
+                        li.breadcrumb-item.active Home
+                      ol.breadcrumb
+                        li.breadcrumb-item
+                          a(href='#') Home
+                        li.breadcrumb-item.active Library
+                      ol.breadcrumb
+                        li.breadcrumb-item
+                          a(href='#') Home
+                        li.breadcrumb-item
+                          a(href='#') Library
+                        li.breadcrumb-item.active Data
+                  .col-lg-6
+                    h2#pagination Pagination
+                    .bs-component
+                      div
+                        ul.pagination
+                          li.page-item.disabled
+                            a.page-link(href='#') «
+                          li.page-item.active
+                            a.page-link(href='#') 1
+                          li.page-item
+                            a.page-link(href='#') 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 4
+                          li.page-item
+                            a.page-link(href='#') 5
+                          li.page-item
+                            a.page-link(href='#') »
+                      div
+                        ul.pagination.pagination-lg
+                          li.page-item.disabled
+                            a.page-link(href='#') «
+                          li.page-item.active
+                            a.page-link(href='#') 1
+                          li.page-item
+                            a.page-link(href='#') 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 4
+                          li.page-item
+                            a.page-link(href='#') 5
+                          li.page-item
+                            a.page-link(href='#') »
+                      div
+                        ul.pagination.pagination-sm
+                          li.page-item.disabled
+                            a.page-link(href='#') «
+                          li.page-item.active
+                            a.page-link(href='#') 1
+                          li.page-item
+                            a.page-link(href='#') 2
+                          li.page-item
+                            a.page-link(href='#') 3
+                          li.page-item
+                            a.page-link(href='#') 4
+                          li.page-item
+                            a.page-link(href='#') 5
+                          li.page-item
+                            a.page-link(href='#') »
+              //
+                Indicators
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#indicators Indicators
+                .row
+                  .col-lg-12
+                    h2 Alerts
+                    .bs-component
+                      .alert.alert-dismissible.alert-primary
+                        button.close(type='button', data-dismiss='alert') ×
+                        h4.alert-heading Warning!
+                        p.mb-0
+                          | Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, 
+                          a.alert-link(href='#') vel scelerisque nisl consectetur et
+                          | .
+                
+              //
+                Progress
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#progress Progress
+                    h3#progress-basic Basic
+                    .bs-component
+                      .progress
+                        .progress-bar(role='progressbar', style='width: 25%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                    h3#progress-animated Animated
+                    .bs-component
+                      .progress
+                        .progress-bar.progress-bar-striped.progress-bar-animated(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100', style='width: 75%')
+              //
+                Containers
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#containers Containers
+                    .bs-component
+                      .jumbotron
+                        h1.display-3 Hello, world!
+                        p.lead
+                          | This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+                        hr.my-4
+                        p
+                          | It uses utility classes for typography and spacing to space content out within the larger container.
+                        p.lead
+                          a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
+                .row
+                  .col-lg-12
+                    h2 List groups
+                .row
+                  .col-lg-4
+                    .bs-component
+                      ul.list-group
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                          | Cras justo odio
+                          span.badge.badge-primary.badge-pill 14
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                          | Dapibus ac facilisis in
+                          span.badge.badge-primary.badge-pill 2
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                          | Morbi leo risus
+                          span.badge.badge-primary.badge-pill 1
+                  .col-lg-4
+                    .bs-component
+                      .list-group
+                        a.list-group-item.list-group-item-action.active(href='#')
+                          | Cras justo odio
+                        a.list-group-item.list-group-item-action(href='#')
+                          | Dapibus ac facilisis in
+                        a.list-group-item.list-group-item-action.disabled(href='#')
+                          | Morbi leo risus
+                  .col-lg-4
+                    .bs-component
+                      .list-group
+                        a.list-group-item.list-group-item-action.flex-column.align-items-start.active(href='#')
+                          .d-flex.w-100.justify-content-between
+                            h5.mb-1 List group item heading
+                            small 3 days ago
+                          p.mb-1
+                            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          small Donec id elit non mi porta.
+                        a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
+                          .d-flex.w-100.justify-content-between
+                            h5.mb-1 List group item heading
+                            small.text-muted 3 days ago
+                          p.mb-1
+                            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          small.text-muted Donec id elit non mi porta.
+                .row
+                  .col-lg-12
+                    h2 Cards
+                .row
+                  .col-lg-4
+                    .bs-component
+                      .card.text-white.bg-primary.mb-3(style='max-width: 20rem;')
+                        .card-header Header
+                        .card-body
+                          h4.card-title Primary card title
+                          p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                      
+                  .col-lg-4
+                    .bs-component
+                      .card.border-primary.mb-3(style='max-width: 20rem;')
+                        .card-header Header
+                        .card-body
+                          h4.card-title Primary card title
+                          p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                  .col-lg-4
+                    .bs-component
+                      .card
+                        .card-body
+                          h4.card-title Card title
+                          h6.card-subtitle.mb-2.text-muted Card subtitle
+                          p.card-text
+                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                          a.card-link(href='#') Card link
+                          a.card-link(href='#') Another link
+              //
+                Dialogs
+                ==================================================
+              .bs-docs-section
+                .row
+                  .col-lg-12
+                    .page-header
+                      h1#dialogs Dialogs
+                .row
+                  .col-lg-12
+                    h2 Modals
+                    .bs-component
+                      .modal
+                        .modal-dialog(role='document')
+                          .modal-content
+                            .modal-header
+                              h5.modal-title Modal title
+                              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') ×
+                            .modal-body
+                              p Modal body text goes here.
+                            .modal-footer
+                              button.btn.btn-primary(type='button') Save changes
+                              button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+              #source-modal.modal.fade
+                .modal-dialog.modal-lg
+                  .modal-content
+                    .modal-header
+                      h4.modal-title Source Code
+                      button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    .modal-body
+                      pre(contenteditable='').
+              footer#footer
+                .row
+                  .col-lg-12
+                    ul.list-unstyled
+                      li.float-lg-right
+                        a(href='#top') Back to top
+                    p
+                      | Based on 
+                      a(href='https://getbootstrap.com', rel='nofollow') Bootstrap
+                      | . Icons from 
+                      a(href='http://fontawesome.io/', rel='nofollow') Font Awesome
+                      | . Web fonts from 
+                      a(href='https://fonts.google.com/', rel='nofollow') Google
+                      | .
+    script(src='https://bootswatch.com/_vendor/jquery/dist/jquery.min.js')
+    script(src='https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js')
+    script(src='https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js")
+    script.
+      new Vue({
+        el: '#main-color',
+        data: {
+          className: 'blue-main'
+        },
+        computed: {
+          showColor() {
+            switch(this.className) {
+              case 'blue-d2':
+                return '#00A7E5';
+                break;
+              case 'blue-d3':
+                return '#008BBF';
+                break;
+              case 'blue-d4':
+                return '#005D7F';
+                break;
+              case 'blue-d5':
+                return '#002E40';
+                break;
+              default:
+                return '#00BAFF';
+            }
+          }
+        }
+      });

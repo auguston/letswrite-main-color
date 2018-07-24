@@ -1,12 +1,12 @@
 doctype html
-html(lang='en')
+html(lang='zh-TW')
   head
     meta(charset='utf-8')
     title 主要色系：江湖藍
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(rel='stylesheet', href='https://bootswatch.com/4/cosmo/bootstrap.css', media='screen')
-    link(rel='stylesheet', href='https://bootswatch.com/_assets/css/custom.min.css')
+    link(rel='stylesheet', href='//bootswatch.com/4/cosmo/bootstrap.css', media='screen')
+    link(rel='stylesheet', href='//bootswatch.com/_assets/css/custom.min.css')
     link(rel="stylesheet", href="color.css")
   body
     div#main-color(:class="className")
@@ -160,31 +160,22 @@ html(lang='en')
                 h4 Heading 4
                 h5 Heading 5
                 h6 Heading 6
-                h3
-                  | Heading
+                h3 Heading
                   small.text-muted with muted text
                 p.lead Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
             .col-lg-4
               .bs-component
                 h2 Example body text
-                p
-                  | Nullam quis risus eget 
-                  a(href='#') urna mollis ornare
-                  |  vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                p Nullam quis risus eget 
+                  a(href='#') urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
                 p
                   small This line of text is meant to be treated as fine print.
-                p
-                  | The following is 
-                  strong rendered as bold text
-                  | .
-                p
-                  | The following is 
-                  em rendered as italicized text
-                  | .
-                p
-                  | An abbreviation of the word attribute is 
-                  abbr(title='attribute') attr
-                  | .
+                p The following is 
+                  strong rendered as bold text .
+                p The following is 
+                  em rendered as italicized text .
+                p An abbreviation of the word attribute is 
+                  abbr(title='attribute') attr .
             .col-lg-4
               .bs-component
                 h2 Emphasis classes
@@ -199,26 +190,20 @@ html(lang='en')
             .col-lg-4
               .bs-component
                 blockquote.blockquote
-                  p.mb-0
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                  footer.blockquote-footer
-                    | Someone famous in 
+                  p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer Someone famous in 
                     cite(title='Source Title') Source Title
             .col-lg-4
               .bs-component
                 blockquote.blockquote.text-center
-                  p.mb-0
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                  footer.blockquote-footer
-                    | Someone famous in 
+                  p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer Someone famous in 
                     cite(title='Source Title') Source Title
             .col-lg-4
               .bs-component
                 blockquote.blockquote.text-right
-                  p.mb-0
-                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                  footer.blockquote-footer
-                    | Someone famous in 
+                  p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer Someone famous in 
                     cite(title='Source Title') Source Title
         //
           Tables
@@ -300,32 +285,31 @@ html(lang='en')
                           .form-group
                             label(for='exampleInputFile') File input
                             input#exampleInputFile.form-control-file(type='file', aria-describedby='fileHelp')
-                            small#fileHelp.form-text.text-muted
-                              | This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
+                            small#fileHelp.form-text.text-muted This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
                           fieldset.form-group
                             legend Radio buttons
                             .form-check
                               label.form-check-label
                                 input#optionsRadios1.form-check-input(type='radio', name='optionsRadios', value='option1', checked='')
-                                |                         Option one is this and that—be sure to include why it's great
+                                | Option one is this and that—be sure to include why it's great
                             .form-check
                               label.form-check-label
                                 input#optionsRadios2.form-check-input(type='radio', name='optionsRadios', value='option2')
-                                |                         Option two can be something else and selecting it will deselect option one
+                                | Option two can be something else and selecting it will deselect option one
                             .form-check.disabled
                               label.form-check-label
                                 input#optionsRadios3.form-check-input(type='radio', name='optionsRadios', value='option3', disabled='')
-                                |                         Option three is disabled
+                                | Option three is disabled
                           fieldset.form-group
                             legend Checkboxes
                             .form-check
                               label.form-check-label
                                 input.form-check-input(type='checkbox', value='', checked='')
-                                |                         Option one is this and that—be sure to include why it's great
+                                | Option one is this and that—be sure to include why it's great
                             .form-check.disabled
                               label.form-check-label
                                 input.form-check-input(type='checkbox', value='', disabled='')
-                                |                         Option two is disabled
+                                | Option two is disabled
                           button.btn.btn-primary(type='submit') Submit
                   .col-lg-4.offset-lg-1
                     form.bs-component
@@ -425,17 +409,13 @@ html(lang='en')
                             a.dropdown-item(href='#') Separated link
                       #myTabContent.tab-content
                         #home.tab-pane.fade.show.active
-                          p
-                            | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                          p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
                         #profile.tab-pane.fade
-                          p
-                            | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                          p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
                         #dropdown1.tab-pane.fade
-                          p
-                            | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+                          p Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
                         #dropdown2.tab-pane.fade
-                          p
-                            | Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.
+                          p Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.
                   .col-lg-6
                     h2#nav-pills Pills
                     .bs-component
@@ -553,10 +533,8 @@ html(lang='en')
                       .alert.alert-dismissible.alert-primary
                         button.close(type='button', data-dismiss='alert') ×
                         h4.alert-heading Warning!
-                        p.mb-0
-                          | Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, 
-                          a.alert-link(href='#') vel scelerisque nisl consectetur et
-                          | .
+                        p.mb-0 Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, 
+                          a.alert-link(href='#') vel scelerisque nisl consectetur et .
                 
               //
                 Progress
@@ -588,8 +566,7 @@ html(lang='en')
                         p.lead
                           | This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
                         hr.my-4
-                        p
-                          | It uses utility classes for typography and spacing to space content out within the larger container.
+                        p It uses utility classes for typography and spacing to space content out within the larger container.
                         p.lead
                           a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
                 .row
@@ -624,15 +601,13 @@ html(lang='en')
                           .d-flex.w-100.justify-content-between
                             h5.mb-1 List group item heading
                             small 3 days ago
-                          p.mb-1
-                            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
                           small Donec id elit non mi porta.
                         a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
                           .d-flex.w-100.justify-content-between
                             h5.mb-1 List group item heading
                             small.text-muted 3 days ago
-                          p.mb-1
-                            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                          p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
                           small.text-muted Donec id elit non mi porta.
                 .row
                   .col-lg-12
@@ -644,8 +619,7 @@ html(lang='en')
                         .card-header Header
                         .card-body
                           h4.card-title Primary card title
-                          p.card-text
-                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                          p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
                       
                   .col-lg-4
                     .bs-component
@@ -653,16 +627,14 @@ html(lang='en')
                         .card-header Header
                         .card-body
                           h4.card-title Primary card title
-                          p.card-text
-                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                          p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
                   .col-lg-4
                     .bs-component
                       .card
                         .card-body
                           h4.card-title Card title
                           h6.card-subtitle.mb-2.text-muted Card subtitle
-                          p.card-text
-                            | Some quick example text to build on the card title and make up the bulk of the card's content.
+                          p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
                           a.card-link(href='#') Card link
                           a.card-link(href='#') Another link
               //
@@ -711,10 +683,10 @@ html(lang='en')
                       | . Web fonts from 
                       a(href='https://fonts.google.com/', rel='nofollow') Google
                       | .
-    script(src='https://bootswatch.com/_vendor/jquery/dist/jquery.min.js')
-    script(src='https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js')
-    script(src='https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js')
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js")
+    script(src='//bootswatch.com/_vendor/jquery/dist/jquery.min.js')
+    script(src='//bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js')
+    script(src='//bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js")
     script.
       new Vue({
         el: '#main-color',

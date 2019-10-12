@@ -2,13 +2,29 @@ doctype html
 html(lang='zh-TW')
   head
     meta(charset='utf-8')
-    title 主要色系：江湖藍
+    title 主要色系：江湖藍 - Augustus - Let's Write
+    link(rel="canonical", href='https://auguston.github.io/letswrite-main-color/')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     link(rel='stylesheet', href='//bootswatch.com/4/cosmo/bootstrap.css', media='screen')
     link(rel='stylesheet', href='//bootswatch.com/_assets/css/custom.min.css')
     link(rel="stylesheet", href="color.css")
+
+    link(rel="shortcut icon", href="https://i0.wp.com/letswrite.tw/wp-content/uploads/2019/07/cropped-letswrite512-1.jpg")
+
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PGQ9WQT');
   body
+
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT", height="0", width="0", style="display:none;visibility:hidden")
+      
     div#main-color(:class="className")
       .navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-primary
         .container

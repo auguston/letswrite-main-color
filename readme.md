@@ -6,4 +6,4 @@
 - $main-d4: #005D7F
 - $main-d5: #002E40
 
-demo：[https://auguston.github.io/letswrite-main-color/](https://auguston.github.io/letswrite-main-color/)
+demo：[https://letswritetw.github.io/letswrite-main-color/](https://letswritetw.github.io/letswrite-main-color/)
